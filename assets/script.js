@@ -31,7 +31,7 @@ function showresult() {
 
 $('.card-container').children().remove();
 
-$.ajax({ url: 'http://api.openweathermap.org/geo/1.0/direct?q=' + JSON.parse(localStorage.getItem('recentcities'))[0] + '&limit=1&appid=1344f093f16f0a5c1c05bae5c0c2942f', method: 'GET',})
+$.ajax({ url: 'https://api.openweathermap.org/geo/1.0/direct?q=' + JSON.parse(localStorage.getItem('recentcities'))[0] + '&limit=1&appid=1344f093f16f0a5c1c05bae5c0c2942f', method: 'GET',})
     .then(function(result1) {
        if (result1) {
        var todays = new Date();
