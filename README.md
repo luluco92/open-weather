@@ -6,4 +6,4 @@ https://luluco92.github.io/open-weather/
 
 
 ## Preview
-[Preview](assets/picture.png)
+![Preview](assets/picture.PNG)
