@@ -43,7 +43,7 @@ $.ajax({ url: 'https://api.openweathermap.org/geo/1.0/direct?q=' + JSON.parse(lo
              console.log(result2);
              if (result2) {
                 var todays = new Date();
-                iconURL = 'http://openweathermap.org/img/wn/' + result2.list[0].weather[0].icon + '.png'
+                iconURL = 'https://openweathermap.org/img/wn/' + result2.list[0].weather[0].icon + '.png'
                 // $('#resultname').text(result2.city.name + ' - ' + todays.getFullYear() + '-' + (todays.getMonth() + 1) + '-' + todays.getDate());
                 $('#resultname').text(result2.city.name + ' - ' + result2.list[0].dt_txt.slice(0,10));
                 $('#resultname').parent().children('img').attr('src', iconURL);
@@ -58,7 +58,7 @@ $.ajax({ url: 'https://api.openweathermap.org/geo/1.0/direct?q=' + JSON.parse(lo
                 var flexcard = $('<div>');
                 flexcard.append('<h4>' + result2.list[i].dt_txt.slice(0,10) + '</h4>');
                 flexcard.append('<img height=40px width=40px>');
-                flexcard.children('img').attr('src', 'http://openweathermap.org/img/wn/' + result2.list[i].weather[0].icon + '.png');
+                flexcard.children('img').attr('src', 'https://openweathermap.org/img/wn/' + result2.list[i].weather[0].icon + '.png');
                 flexcard.append('<ul></ul>');
                 flexcard.children('ul').append('<li>Temp: ' + result2.list[i].main.temp + '\u00B0F</li>')
                 flexcard.children('ul').append('<li>Wind: ' + (result2.list[i].wind.speed * 2.2369).toFixed(2) + 'MPH</li>')
